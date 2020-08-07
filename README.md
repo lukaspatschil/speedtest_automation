@@ -4,7 +4,7 @@ A small script to test download speed of my internet to see if i ever get the am
 
 ## Setup
 
-Make a folder named `out` on the same level as the script.
+Make a folder named `out` and write the path to the folder in the path variable.
 
 ## How it works
 
