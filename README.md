@@ -27,4 +27,4 @@ Install requirements with `pip3 install requirements.txt`.
 
 ### Usage
 
-Just execute the script. ¯\_(ツ)_/¯
+Just execute the script. `¯\_(ツ)_/¯`
