@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from datetime import datetime
 import speedtest
@@ -8,12 +8,12 @@ unit = 1000000
 
 st = speedtest.Speedtest()
 
-path = "/home/pi/python/"
+path = "/home/pi/python/out"
 
 
 now = datetime.now()
 testDate = now.strftime("%d/%m/%Y %H:%M:%S")
-filename = "out/" + now.strftime("%Y-%m-%d") + ".a"
+filename = now.strftime("%Y-%m-%d") + ".a"
 
 downloadTest = round(st.download() / unit, 2)
 

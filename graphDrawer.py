@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from os.path import isfile, join
 from os import listdir
@@ -28,9 +28,16 @@ for file in filenames:
 print(speeds)
 
 y_pos = np.arange(len(dates))
+print(y_pos)
 plt.bar(y_pos, speeds, align='center', alpha=0.5)
 plt.xticks(y_pos, dates)
-plt.ylabel('Speed')
+plt.ylabel('Speed in Mbit/s')
 plt.title('Internet speed')
+
+average = sum(speeds) / len(speeds)
+
+print(average)
+
+plt.hlines(average, 0, len(dates), colors='red')
 
 plt.show()
