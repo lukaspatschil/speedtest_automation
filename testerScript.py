@@ -17,7 +17,7 @@ filename = now.strftime("%Y-%m-%d") + ".a"
 
 downloadTest = round(st.download() / unit, 2)
 
-f = open(os.path.join(path, filename), "a")
-f.write(testDate + ';' + str(downloadTest) + '\n')
-f.close()
+with open(os.path.join(path, filename), "a") as f:
+    f.write(testDate + ';' + str(downloadTest) + '\n')
+
 print('DONE')

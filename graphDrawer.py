@@ -15,13 +15,12 @@ speeds = []
 for file in filenames:
     dates.append(file.split('.')[0].replace('-', '.'))
 
-    f = open(join(path, file))
-
-    dataSum = 0
-    lineCount = 0
-    for line in f:
-        dataSum += float(line.split(';')[1])
-        lineCount += 1
+    with open(join(path, file)) as f:
+        dataSum = 0
+        lineCount = 0
+        for line in f:
+            dataSum += float(line.split(';')[1])
+            lineCount += 1
 
     speeds.append(round(dataSum / lineCount, 2))
 
